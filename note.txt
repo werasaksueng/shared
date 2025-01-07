@@ -1,3 +1,0 @@
-Download and install:
-   - jdk1.8.0_221
-   - jdk-20
