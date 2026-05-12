@@ -1,0 +1,32 @@
+Openzeppelin provides ERC20Burnable that allows:
+    - token.burn(<amount>)
+Burns <amount> tokens of the tx caller.
+
+    - token.burnFrom(<contract address>, <amount>)
+Requires allowance approval first (approve()).
+Burns tokens from the token owner account.
+
+Hw4:
+  - Copy ERC20Burnable from Openzeppelin.
+  - Create a browine 'burnApp'.
+     -- Load, compile, and deploy ERC20Burnable.
+  - Create scripts:
+     -- Deploy the contract:
+	 MTK is the token symbol.
+         Initial mint is 1000 MTK.
+	 Let 'me' be the contract owner (who deloys the contract).
+     -- script1.py for burn().
+	 Let 'john' be a normal account.
+         Transfer 100 MTK from 'me' to 'john'.
+         'john' burns his own 10 MTK using burn().
+         Show 'john' MTK balance and MTK totalSupply.
+     -- script2.py for burnFrom().
+	 Let 'jack' be a normal account.
+         'me' approves 'jack' to spend 200 MTK.
+         'jack' burns 20 MTK using burnFrom().
+         Show 'jack' MTK balance and MTK totalSupply.
+
+Uses Ganache so that all accounts come with initialized 100 ETH.
+Reset accounts before running script1.py and script2.py.
+Send only the script1.py and script2.py (with results) to
+		werasakstw@gmail.com
